@@ -10,10 +10,24 @@ meg = User.create!(
   password: "password",
   role: "student"
 )
-pip = User.create!(
-  first_name: "Pip",
-  last_name: "Kitty",
-  email_address: "pip@email.com",
+chris = User.create!(
+  first_name: "Chris",
+  last_name: "Kakos",
+  email_address: "chris@email.com",
+  password: "password",
+  role: "student"
+)
+connie = User.create!(
+  first_name: "Connie",
+  last_name: "Hyman",
+  email_address: "connie@email.com",
+  password: "password",
+  role: "student"
+)
+nick = User.create!(
+  first_name: "Nick",
+  last_name: "Romans",
+  email_address: "nick@email.com",
   password: "password",
   role: "student"
 )
