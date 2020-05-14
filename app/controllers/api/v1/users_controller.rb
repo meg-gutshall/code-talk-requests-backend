@@ -25,8 +25,7 @@ class Api::V1::UsersController < ApplicationController
   end
   
   private
-    # TODO: Check into whether require(:user) is need in the user_params method
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email_address, :password_digest, :role)
+      params.permit(:first_name, :last_name, :email_address, :password_digest, :role)
     end
 end
