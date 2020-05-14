@@ -1,3 +1,4 @@
 class User < ApplicationRecord
+  has_secure_password
   enum role: [:student, :instructor, :super_admin]
 end
