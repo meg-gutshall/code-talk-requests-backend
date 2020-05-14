@@ -7,12 +7,14 @@ meg = User.create!(
   first_name: "Meg",
   last_name: "Gutshall",
   email_address: "meg@email.com",
-  password: "password"
+  password: "password",
+  role: "student"
 )
 pip = User.create!(
   first_name: "Pip",
   last_name: "Kitty",
   email_address: "pip@email.com",
-  password: "password"
+  password: "password",
+  role: "student"
 )
 puts "Created #{User.all.count} users"
