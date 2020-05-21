@@ -2,6 +2,7 @@ class ApplicationController < ActionController::API
   before_action :authorized
 
   secret = "super secret"
+  # TODO: Store secret in a .env file and change it
 
   def encode_token(payload)
     JWT.encode(payload, secret)
