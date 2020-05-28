@@ -33,6 +33,8 @@ class ApplicationController < ActionController::API
   end
 
   def authorized
+    # TODO: Link or reroute to login/sign up page
+    # Read: https://medium.com/javascript-by-doing/create-a-modern-javascript-router-805fc14d084d
     render json: { message: "Please log in" }, status: :unauthorized unless logged_in?
   end
 end
