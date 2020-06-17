@@ -12,7 +12,7 @@ gem 'puma', '~> 4.1'
 # gem 'redis', '~> 4.0'
 
 # A lightning fast JSON:API serializer for Ruby Objects
-gem 'fast_jsonapi', '~> 1.7.1', git: 'https://github.com/fast-jsonapi/fast_jsonapi'
+gem 'fast_jsonapi', '~> 1.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
