@@ -11,13 +11,6 @@ meg = User.create!(
   password: "password",
   role: "student"
 )
-chris = User.create!(
-  first_name: "Chris",
-  last_name: "Kakos",
-  email_address: "chris@email.com",
-  password: "password",
-  role: "student"
-)
 connie = User.create!(
   first_name: "Connie",
   last_name: "Hyman",
@@ -25,17 +18,18 @@ connie = User.create!(
   password: "password",
   role: "student"
 )
-nick = User.create!(
-  first_name: "Nick",
-  last_name: "Romans",
-  email_address: "nick@email.com",
-  password: "password",
-  role: "student"
-)
 puts "Created #{User.student.count} students"
+dwayne = User.create!(
+  first_name: "Dwayne",
+  last_name: "Harmon",
+  email_address: "dwayne@email.com",
+  password: "password",
+  role: "instructor"
+)
+puts "Created #{User.instructor.count} instructor"
 
 # Create requests
-Faker::Number.between(from: 6, to: 14).times do
+Faker::Number.between(from: 4, to: 9).times do
   Request.create!(
     topic: Faker::Lorem.paragraph_by_chars(number: 50, supplemental: true),
     module: Faker::Lorem.sentence(word_count: 1, supplemental: true, random_words_to_add: 2),
@@ -43,4 +37,4 @@ Faker::Number.between(from: 6, to: 14).times do
     student: User.student.sample
   )
 end
-puts "Created #{User.all.count} users"
+puts "Created #{Request.all.count} requests"
