@@ -43,4 +43,4 @@ Faker::Number.between(from: 6, to: 14).times do
     student: User.student.sample
   )
 end
-puts "Created #{User.all.count} users"
+puts "Created #{Request.all.count} requests"
