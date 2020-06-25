@@ -2,6 +2,7 @@
 
 User.destroy_all
 Request.destroy_all
+MODULES = ["Git & GitHub", "Intro to Ruby", "HTML & CSS", "Procedural Ruby", "Object-Oriented Ruby", "SQL", "ORMs & ActiveRecord", "Rack", "Sinatra", "Rails", "JavaScript", "React", "Redux", "Other"]
 
 # Create users
 meg = User.create!(
@@ -32,7 +33,7 @@ puts "Created #{User.instructor.count} instructor"
 Faker::Number.between(from: 4, to: 9).times do
   Request.create!(
     topic: Faker::Lorem.paragraph_by_chars(number: 50, supplemental: true),
-    module: Faker::Lorem.sentence(word_count: 1, supplemental: true, random_words_to_add: 2),
+    module: MODULES.sample,
     description: Faker::Lorem.paragraph(sentence_count: 2, supplemental: true, random_sentences_to_add: 1),
     student: User.student.sample
   )
