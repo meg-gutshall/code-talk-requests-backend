@@ -1,6 +1,6 @@
-class CreateRequests < ActiveRecord::Migration[6.0]
+class CreateTopicRequests < ActiveRecord::Migration[6.0]
   def change
-    create_table :requests do |t|
+    create_table :topic_requests do |t|
       t.string :topic
       t.string :module
       # t.string :section

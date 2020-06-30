@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       post '/login', to: 'auth#create'
       resources :users, only: [:index, :show, :create]
-      resources :requests, only: [:index]
+      resources :topic_requests, only: [:index]
     end
   end
 end

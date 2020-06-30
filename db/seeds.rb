@@ -1,7 +1,7 @@
 # This file should contain all the record creation needed to seed the database with its default values. The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 
 User.destroy_all
-Request.destroy_all
+TopicRequest.destroy_all
 Upvote.destroy_all
 MODS = ["Git & GitHub", "Intro to Ruby", "HTML & CSS", "Procedural Ruby", "Object-Oriented Ruby", "SQL", "ORMs & ActiveRecord", "Rack", "Sinatra", "Rails", "JavaScript", "React", "Redux", "Other"]
 
@@ -37,25 +37,26 @@ dwayne = User.create!(
   password: "password",
   role: "instructor"
 )
-puts "Created #{User.instructor.count} instructor"
+num_instructors = User.instructor.count
+puts "Created #{num_instructors} instructor"
 
-# Create requests
+# Create topic requests
 Faker::Number.between(from: num_students, to: num_students * 3).times do
-  Request.create!(
+  TopicRequest.create!(
     topic: Faker::Lorem.paragraph_by_chars(number: 50, supplemental: true),
     module: MODS.sample,
     description: Faker::Lorem.paragraph(sentence_count: 2, supplemental: true, random_sentences_to_add: 1),
     student: User.student.sample
   )
 end
-num_requests = Request.all.count
-puts "Created #{num_requests} requests"
+num_topic_requests = TopicRequest.all.count
+puts "Created #{num_topic_requests} topic requests"
 
 # Create upvotes
-Faker::Number.between(from: num_requests, to: num_requests * 2).times do
+Faker::Number.between(from: num_topic_requests, to: num_topic_requests * 2).times do
   Upvote.create!(
     comment: Faker::Lorem.paragraph(sentence_count: 1, supplemental: true, random_sentences_to_add: 1),
-    request: Request.all.sample,
+    topic_request: TopicRequest.all.sample,
     student: User.student.sample
   )
 end

@@ -1,4 +1,4 @@
-class RequestSerializer
+class TopicRequestSerializer
   include FastJsonapi::ObjectSerializer
   set_id :student_id
   attributes :topic, :module, :description, :student_id
