@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       post '/login', to: 'auth#create'
       resources :users, only: [:index, :show, :create]
       resources :topic_requests, only: [:index]
+      resources :upvotes, only: [:index]
     end
   end
 end
