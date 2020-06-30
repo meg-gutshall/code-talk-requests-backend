@@ -2,7 +2,8 @@
 
 User.destroy_all
 Request.destroy_all
-MODULES = ["Git & GitHub", "Intro to Ruby", "HTML & CSS", "Procedural Ruby", "Object-Oriented Ruby", "SQL", "ORMs & ActiveRecord", "Rack", "Sinatra", "Rails", "JavaScript", "React", "Redux", "Other"]
+Upvote.destroy_all
+MODS = ["Git & GitHub", "Intro to Ruby", "HTML & CSS", "Procedural Ruby", "Object-Oriented Ruby", "SQL", "ORMs & ActiveRecord", "Rack", "Sinatra", "Rails", "JavaScript", "React", "Redux", "Other"]
 
 # Create users
 meg = User.create!(
@@ -26,7 +27,9 @@ adam = User.create!(
   password: "password",
   role: "student"
 )
-puts "Created #{User.student.count} students"
+num_students = User.student.count
+puts "Created #{num_students} students"
+
 dwayne = User.create!(
   first_name: "Dwayne",
   last_name: "Harmon",
@@ -37,12 +40,24 @@ dwayne = User.create!(
 puts "Created #{User.instructor.count} instructor"
 
 # Create requests
-Faker::Number.between(from: 6, to: 14).times do
+Faker::Number.between(from: num_students, to: num_students * 3).times do
   Request.create!(
     topic: Faker::Lorem.paragraph_by_chars(number: 50, supplemental: true),
-    module: MODULES.sample,
+    module: MODS.sample,
     description: Faker::Lorem.paragraph(sentence_count: 2, supplemental: true, random_sentences_to_add: 1),
     student: User.student.sample
   )
 end
-puts "Created #{Request.all.count} requests"
+num_requests = Request.all.count
+puts "Created #{num_requests} requests"
+
+# Create upvotes
+Faker::Number.between(from: num_requests, to: num_requests * 2).times do
+  Upvote.create!(
+    comment: Faker::Lorem.paragraph(sentence_count: 1, supplemental: true, random_sentences_to_add: 1),
+    request: Request.all.sample,
+    student: User.student.sample
+  )
+end
+num_upvotes = Upvote.all.count
+puts "Created #{num_upvotes} upvotes"

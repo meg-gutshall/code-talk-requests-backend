@@ -4,5 +4,9 @@ class User < ApplicationRecord
 
   has_many :requests, foreign_key: :student_id
 
+  has_many :upvotes, foreign_key: :student_id
+  # ! Do I add dependent: :destroy here?
+  has_many :upvoted_requests, through: :upvotes, source: :request
+
   enum role: {student: 0, instructor: 1, super_admin: 2}
 end
