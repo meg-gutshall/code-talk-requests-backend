@@ -1,8 +1,8 @@
 # This file should contain all the record creation needed to seed the database with its default values. The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 
 User.destroy_all
-Request.destroy_all
-MODULES = ["Git & GitHub", "Intro to Ruby", "HTML & CSS", "Procedural Ruby", "Object-Oriented Ruby", "SQL", "ORMs & ActiveRecord", "Rack", "Sinatra", "Rails", "JavaScript", "React", "Redux", "Other"]
+TopicRequest.destroy_all
+MODS = ["Git & GitHub", "Intro to Ruby", "HTML & CSS", "Procedural Ruby", "Object-Oriented Ruby", "SQL", "ORMs & ActiveRecord", "Rack", "Sinatra", "Rails", "JavaScript", "React", "Redux", "Other"]
 
 # Create users
 meg = User.create!(
@@ -36,13 +36,13 @@ dwayne = User.create!(
 )
 puts "Created #{User.instructor.count} instructor"
 
-# Create requests
+# Create topic requests
 Faker::Number.between(from: 6, to: 14).times do
-  Request.create!(
+  TopicRequest.create!(
     topic: Faker::Lorem.paragraph_by_chars(number: 50, supplemental: true),
-    module: MODULES.sample,
+    module: MODS.sample,
     description: Faker::Lorem.paragraph(sentence_count: 2, supplemental: true, random_sentences_to_add: 1),
     student: User.student.sample
   )
 end
-puts "Created #{Request.all.count} requests"
+puts "Created #{TopicRequest.all.count} topic requests"
