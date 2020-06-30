@@ -28,11 +28,11 @@ ActiveRecord::Schema.define(version: 2020_06_30_084013) do
   create_table "upvotes", force: :cascade do |t|
     t.text "comment"
     t.bigint "student_id"
-    t.bigint "request_id"
+    t.bigint "topic_request_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["request_id"], name: "index_upvotes_on_request_id"
     t.index ["student_id"], name: "index_upvotes_on_student_id"
+    t.index ["topic_request_id"], name: "index_upvotes_on_topic_request_id"
   end
 
   create_table "users", force: :cascade do |t|

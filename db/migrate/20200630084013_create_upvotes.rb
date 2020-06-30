@@ -3,7 +3,7 @@ class CreateUpvotes < ActiveRecord::Migration[6.0]
     create_table :upvotes do |t|
       t.text :comment
       t.references :student
-      t.references :request
+      t.references :topic_request
 
       t.timestamps null: false
     end
