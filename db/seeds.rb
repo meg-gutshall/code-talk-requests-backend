@@ -19,6 +19,13 @@ connie = User.create!(
   password: "password",
   role: "student"
 )
+adam = User.create!(
+  first_name: "Adam",
+  last_name: "Weissman",
+  email_address: "adam@email.com",
+  password: "password",
+  role: "student"
+)
 puts "Created #{User.student.count} students"
 dwayne = User.create!(
   first_name: "Dwayne",
@@ -30,7 +37,7 @@ dwayne = User.create!(
 puts "Created #{User.instructor.count} instructor"
 
 # Create requests
-Faker::Number.between(from: 4, to: 9).times do
+Faker::Number.between(from: 6, to: 14).times do
   Request.create!(
     topic: Faker::Lorem.paragraph_by_chars(number: 50, supplemental: true),
     module: MODULES.sample,
