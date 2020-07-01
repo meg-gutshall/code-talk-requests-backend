@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_06_14_212349) do
     t.string "topic"
     t.string "module"
     t.text "description"
+    t.integer "upvotes"
     t.bigint "student_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

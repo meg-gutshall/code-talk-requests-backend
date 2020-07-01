@@ -45,6 +45,7 @@ Faker::Number.between(from: num_students * 2, to: num_students * 3).times do
     topic: Faker::Lorem.paragraph_by_chars(number: 50, supplemental: true),
     module: MODS.sample,
     description: Faker::Lorem.paragraph(sentence_count: 2, supplemental: true, random_sentences_to_add: 1),
+    upvotes: Faker::Number.between(from: 0, to: 18),
     student: User.student.sample
   )
 end

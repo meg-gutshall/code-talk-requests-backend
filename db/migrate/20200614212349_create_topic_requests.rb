@@ -5,6 +5,7 @@ class CreateTopicRequests < ActiveRecord::Migration[6.0]
       t.string :module
       # t.string :section
       t.text :description
+      t.integer :upvotes
       t.references :student
 
       t.timestamps null: false
