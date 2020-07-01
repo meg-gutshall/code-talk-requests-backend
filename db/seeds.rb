@@ -26,18 +26,21 @@ adam = User.create!(
   password: "password",
   role: "student"
 )
-puts "Created #{User.student.count} students"
-dwayne = User.create!(
-  first_name: "Dwayne",
-  last_name: "Harmon",
-  email_address: "dwayne@email.com",
+num_students = User.student.count
+puts "Created #{num_students} students"
+
+ayana = User.create!(
+  first_name: "Ayana",
+  last_name: "Cotton-Zaire",
+  email_address: "ayana@email.com",
   password: "password",
   role: "instructor"
 )
-puts "Created #{User.instructor.count} instructor"
+num_instructors = User.instructor.count
+puts "Created #{num_instructors} instructor"
 
 # Create topic requests
-Faker::Number.between(from: 6, to: 14).times do
+Faker::Number.between(from: num_students * 2, to: num_students * 3).times do
   TopicRequest.create!(
     topic: Faker::Lorem.paragraph_by_chars(number: 50, supplemental: true),
     module: MODS.sample,
@@ -45,4 +48,5 @@ Faker::Number.between(from: 6, to: 14).times do
     student: User.student.sample
   )
 end
-puts "Created #{TopicRequest.all.count} topic requests"
+num_topic_requests = TopicRequest.all.count
+puts "Created #{num_topic_requests} topic requests"
