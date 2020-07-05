@@ -2,11 +2,6 @@ class Api::V1::UsersController < ApplicationController
   # TODO: Look into the JSON output formatting
   # ! Comment auth back in
   # skip_before_action :authorized, only: [:create]
-
-  def index
-    users = User.all
-    render json: { users: UserSerializer.new(users) }
-  end
   
   def create
     user = User.new(user_params)
