@@ -4,20 +4,20 @@ class ApplicationController < ActionController::API
 
   def encode_token(payload)
     payload[:iat] = Time.now.to_i
-    payload[:exp] = Time.new.to_i + 5 * 86400
+    payload[:exp] = Time.new.to_i + 86400
     payload[:leeway] = 90
     JWT.encode(payload, ENV["JWT_SECRET"])
   end
 
   def auth_header
-    request.headers["Authorization"]
+    request.headers['Authorization']
   end
 
   def decoded_token
     if auth_header
       token = auth_header.split(" ")[1]
       begin
-        JWT.decode(token, ENV["JWT_SECRET"], true, { verify_iat: true, algorithm: "HS256" })
+        JWT.decode(token, ENV["JWT_SECRET"], true, { verify_iat: true, algorithm: 'HS256' })
       rescue JWT::DecodeError
         nil
       rescue JWT::ExpiredSignature
@@ -30,7 +30,7 @@ class ApplicationController < ActionController::API
 
   def current_user
     if decoded_token
-      user_id = decoded_token[0]["user_id"]
+      user_id = decoded_token[0]['user_id']
       user = User.find_by(id: user_id)
     end
   end
