@@ -8,22 +8,22 @@ MODS = ["Git & GitHub", "Intro to Ruby", "HTML & CSS", "Procedural Ruby", "Objec
 meg = User.create!(
   first_name: "Meg",
   last_name: "Gutshall",
-  email_address: "meg@email.com",
-  password: "password",
+  email_address: "meg@e.com",
+  password: "123",
   role: "student"
 )
 connie = User.create!(
   first_name: "Connie",
   last_name: "Hyman",
-  email_address: "connie@email.com",
-  password: "password",
+  email_address: "connie@e.com",
+  password: "123",
   role: "student"
 )
 adam = User.create!(
   first_name: "Adam",
   last_name: "Weissman",
-  email_address: "adam@email.com",
-  password: "password",
+  email_address: "adam@e.com",
+  password: "123",
   role: "student"
 )
 num_students = User.student.count
