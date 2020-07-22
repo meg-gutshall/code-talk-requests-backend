@@ -1,6 +1,6 @@
 class Api::V1::AuthController < ApplicationController
   # ! Comment auth back in
-  # skip_before_action :authorized, only: [:create]
+  skip_before_action :authorized, only: [:create]
 
   def create
     user = User.find_by(email_address: login_params[:email_address])
@@ -19,6 +19,6 @@ class Api::V1::AuthController < ApplicationController
 
   private
     def login_params
-      params.permit(:email_address, :password)
+      params.require(:user).permit(:email_address, :password)
     end
 end

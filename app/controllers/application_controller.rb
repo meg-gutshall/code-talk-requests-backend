@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
   # ! Comment auth back in
-  # before_action :authorized
+  before_action :authorized
 
   def encode_token(payload)
     payload[:iat] = Time.now.to_i
