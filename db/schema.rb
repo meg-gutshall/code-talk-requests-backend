@@ -17,13 +17,12 @@ ActiveRecord::Schema.define(version: 2020_06_14_212349) do
 
   create_table "topic_requests", force: :cascade do |t|
     t.string "topic"
-    t.string "module"
     t.text "description"
     t.integer "upvotes"
-    t.bigint "student_id"
+    t.bigint "codepanion_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["student_id"], name: "index_topic_requests_on_student_id"
+    t.index ["codepanion_id"], name: "index_topic_requests_on_codepanion_id"
   end
 
   create_table "users", force: :cascade do |t|
