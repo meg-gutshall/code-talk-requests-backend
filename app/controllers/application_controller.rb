@@ -3,9 +3,6 @@ class ApplicationController < ActionController::API
   before_action :authorized
 
   def encode_token(payload)
-    payload[:iat] = Time.now.to_i
-    payload[:exp] = Time.new.to_i + 86400
-    payload[:leeway] = 90
     JWT.encode(payload, ENV["JWT_SECRET"])
   end
 
@@ -17,13 +14,9 @@ class ApplicationController < ActionController::API
     if auth_header
       token = auth_header.split(" ")[1]
       begin
-        JWT.decode(token, ENV["JWT_SECRET"], true, { verify_iat: true, algorithm: 'HS256' })
+        JWT.decode(token, ENV["JWT_SECRET"], true, algorithm: 'HS256')
       rescue JWT::DecodeError
         nil
-      rescue JWT::ExpiredSignature
-        render json: { message: "Your session has expired. Please log in again." }, status: :unauthorized
-      rescue JWT::InvalidIatError
-        render json: { message: "Please log in." }, status: :unauthorized
       end
     end
   end
@@ -45,3 +38,26 @@ class ApplicationController < ActionController::API
     render json: { message: "Please log in." }, status: :unauthorized unless logged_in?
   end
 end
+
+
+# def encode_token(payload)
+#   payload[:iat] = Time.now.to_i
+#   payload[:exp] = Time.new.to_i + 86400
+#   payload[:leeway] = 90
+#   JWT.encode(payload, ENV["JWT_SECRET"])
+# end
+
+# def decoded_token
+#   if auth_header
+#     token = auth_header.split(" ")[1]
+#     begin
+#       JWT.decode(token, ENV["JWT_SECRET"], true, { verify_iat: true, algorithm: 'HS256' })
+#     rescue JWT::DecodeError
+#       nil
+#     rescue JWT::ExpiredSignature
+#       render json: { message: "Your session has expired. Please log in again." }, status: :unauthorized
+#     rescue JWT::InvalidIatError
+#       render json: { message: "Please log in." }, status: :unauthorized
+#     end
+#   end
+# end
