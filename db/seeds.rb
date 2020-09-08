@@ -2,51 +2,49 @@
 
 User.destroy_all
 TopicRequest.destroy_all
-MODS = ["Git & GitHub", "Intro to Ruby", "HTML & CSS", "Procedural Ruby", "Object-Oriented Ruby", "SQL", "ORMs & ActiveRecord", "Rack", "Sinatra", "Rails", "JavaScript", "React", "Redux", "Other"]
 
 # Create users
-meg = User.create!(
-  first_name: "Meg",
-  last_name: "Gutshall",
-  email_address: "meg@e.com",
+steven = User.create!(
+  first_name: "Steven",
+  last_name: "Crouse",
+  email_address: "steven@e.com",
   password: "123",
-  role: "student"
+  role: "codepanion"
 )
 connie = User.create!(
   first_name: "Connie",
   last_name: "Hyman",
   email_address: "connie@e.com",
   password: "123",
-  role: "student"
+  role: "codepanion"
 )
 adam = User.create!(
   first_name: "Adam",
   last_name: "Weissman",
   email_address: "adam@e.com",
   password: "123",
-  role: "student"
+  role: "codepanion"
 )
-num_students = User.student.count
-puts "Created #{num_students} students"
+num_codepanions = User.codepanion.count
+puts "Created #{num_codepanions} codepanions"
 
-ayana = User.create!(
-  first_name: "Ayana",
-  last_name: "Cotton-Zaire",
-  email_address: "ayana@email.com",
-  password: "password",
-  role: "instructor"
+meg = User.create!(
+  first_name: "Meg",
+  last_name: "Gutshall",
+  email_address: "meg@e.com",
+  password: "123",
+  role: "super_admin"
 )
-num_instructors = User.instructor.count
-puts "Created #{num_instructors} instructor"
+num_super_admins = User.super_admin.count
+puts "Created #{num_super_admins} super_admin"
 
 # Create topic requests
-Faker::Number.between(from: num_students * 2, to: num_students * 3).times do
+Faker::Number.between(from: num_codepanions * 2, to: num_codepanions * 3).times do
   TopicRequest.create!(
     topic: Faker::Lorem.paragraph_by_chars(number: 50, supplemental: true),
-    module: MODS.sample,
     description: Faker::Lorem.paragraph(sentence_count: 2, supplemental: true, random_sentences_to_add: 1),
     upvotes: Faker::Number.between(from: 0, to: 18),
-    student: User.student.sample
+    codepanion: User.codepanion.sample
   )
 end
 num_topic_requests = TopicRequest.all.count

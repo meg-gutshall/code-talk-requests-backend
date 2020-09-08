@@ -6,6 +6,6 @@ class Api::V1::TopicRequestsController < ApplicationController
 
   private
   def topic_request_params
-    params.require(:topic_request).permit(:topic, :module, :description, :upvotes, :student_id)
+    params.require(:topic_request).permit(:topic, :description, :upvotes, :codepanion_id)
   end
 end
