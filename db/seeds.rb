@@ -41,7 +41,7 @@ puts "Created #{num_super_admins} super_admin"
 # Create topic requests
 Faker::Number.between(from: num_codepanions * 2, to: num_codepanions * 3).times do
   TopicRequest.create!(
-    topic: Faker::Lorem.paragraph_by_chars(number: 50, supplemental: true),
+    idea: Faker::Lorem.paragraph_by_chars(number: 50, supplemental: true),
     description: Faker::Lorem.paragraph(sentence_count: 2, supplemental: true, random_sentences_to_add: 1),
     upvotes: Faker::Number.between(from: 0, to: 18),
     codepanion: User.codepanion.sample
