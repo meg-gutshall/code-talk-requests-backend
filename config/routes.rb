@@ -4,7 +4,7 @@ Rails.application.routes.draw do
       post '/login', to: 'auth#create'
       post '/logout', to: 'auth#destroy'
       resources :users, only: [:show, :create]
-      resources :topic_requests, only: [:index, :create]
+      resources :topic_requests, only: [:index, :create, :update]
     end
   end
 end
