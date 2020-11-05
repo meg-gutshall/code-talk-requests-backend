@@ -25,6 +25,34 @@ adam = User.create!(
   password: "123",
   role: "codepanion"
 )
+chien = User.create!(
+  first_name: "Chi-En",
+  last_name: "Leow",
+  email_address: "chien@e.com",
+  password: "123",
+  role: "codepanion"
+)
+kenton = User.create!(
+  first_name: "Kenton",
+  last_name: "Archer",
+  email_address: "kenton@e.com",
+  password: "123",
+  role: "codepanion"
+)
+daniel = User.create!(
+  first_name: "Daniel",
+  last_name: "Dawson",
+  email_address: "daniel@e.com",
+  password: "123",
+  role: "codepanion"
+)
+ashley = User.create!(
+  first_name: "Ashley",
+  last_name: "Mader",
+  email_address: "ashley@e.com",
+  password: "123",
+  role: "codepanion"
+)
 num_codepanions = User.codepanion.count
 puts "Created #{num_codepanions} codepanions"
 
@@ -35,17 +63,155 @@ meg = User.create!(
   password: "123",
   role: "super_admin"
 )
+sherry = User.create!(
+  first_name: "Sherry",
+  last_name: "Martin",
+  email_address: "sherry@e.com",
+  password: "123",
+  role: "super_admin"
+)
 num_super_admins = User.super_admin.count
 puts "Created #{num_super_admins} super_admin"
 
 # Create topic requests
-Faker::Number.between(from: num_codepanions * 2, to: num_codepanions * 3).times do
-  TopicRequest.create!(
-    idea: Faker::Lorem.paragraph_by_chars(number: 50, supplemental: true),
-    description: Faker::Lorem.paragraph(sentence_count: 2, supplemental: true, random_sentences_to_add: 1),
-    upvotes: Faker::Number.between(from: 0, to: 18),
-    codepanion: User.codepanion.sample
-  )
-end
+TopicRequest.create!(
+  idea: "GitHub",
+  description: "How to connect your local repo to your GitHub repo",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: kenton
+)
+TopicRequest.create!(
+  idea: "SQL",
+  description: "Useful SQL commands",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: connie
+)
+TopicRequest.create!(
+  idea: "Metaprogramming in Ruby",
+  description: "Creating new utility classes and methods",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: ashley
+)
+TopicRequest.create!(
+  idea: "Webpacker in Rails",
+  description: "How do you use it? What's it even for?",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: ashley
+)
+TopicRequest.create!(
+  idea: "Bootstrap",
+  description: "A basic introduction to how to use Bootstrap and implement it in a project",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: ashley
+)
+TopicRequest.create!(
+  idea: "Project Hosting",
+  description: "The different platforms you can use to host your projects (i.e. Heroku, Netlify, GitHub Pages, etc.)",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: ashley
+)
+TopicRequest.create!(
+  idea: "JavaScript Plugins",
+  description: "How to implement third-party JS plugins in your projects",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: chien
+)
+TopicRequest.create!(
+  idea: "CSS",
+  description: "A basic overview of CSS concepts like grid and flexbox",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: chien
+)
+TopicRequest.create!(
+  idea: "Fetch",
+  description: "Using fetch in JavaScript",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: chien
+)
+TopicRequest.create!(
+  idea: "Async/Await",
+  description: "How and when to use the async and await keywords in JavaScript",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: chien
+)
+TopicRequest.create!(
+  idea: "ActiveRecord Queries",
+  description: "How to create ActiveRecord queries and how it differs from SQL",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: chien
+)
+TopicRequest.create!(
+  idea: "Blogging",
+  description: "A brainstorm session for our Flatiron blog topics",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: chien
+)
+TopicRequest.create!(
+  idea: "Project Collaboration",
+  description: "Who wants to collaborate on a side project?",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: adam
+)
+TopicRequest.create!(
+  idea: "Python",
+  description: "Learning the basics of Python",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: adam
+)
+TopicRequest.create!(
+  idea: "Web Hosting",
+  description: "The best ways to host your portfolio site",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: adam
+)
+TopicRequest.create!(
+  idea: "Algorithms",
+  description: "Review common algorithms and complete related challenges",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: daniel
+)
+TopicRequest.create!(
+  idea: "React Native",
+  description: "Learn how to build mobile applications using React",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: daniel
+)
+TopicRequest.create!(
+  idea: "Jekyll",
+  description: "How to use Jekyll to build a static site on GitHub Pages",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: daniel
+)
+TopicRequest.create!(
+  idea: "Kotlin",
+  description: "Basic Kotlin to help with building mobile apps",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: daniel
+)
+TopicRequest.create!(
+  idea: "React State",
+  description: "Explain state in React and what it does exactly",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: steven
+)
+TopicRequest.create!(
+  idea: "Redux vs. React Hooks",
+  description: "Do we need Redux if we use React Hooks?",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: steven
+)
+TopicRequest.create!(
+  idea: "Interview Prep",
+  description: "How to prep for interviews—both behavioral and technical",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: steven
+)
+TopicRequest.create!(
+  idea: "Mock Assessment",
+  description: "Let's do mock project assessments",
+  upvotes: Faker::Number.between(from: 0, to: 6),
+  codepanion: steven
+)
+
 num_topic_requests = TopicRequest.all.count
 puts "Created #{num_topic_requests} topic requests"
