@@ -1,16 +1,10 @@
 # Code Talks Topic Request Platform
 
-## Description
-
 This repo is the backend portion to my Code Talks Topic Request Platform. Below you'll find:
 
-- TODO: Add list items
+<!-- TODO: Add ToC here -->
 
 See [the frontend repo][Code Talk Requests Frontend] for a more detailed `README.md`.
-
-## Table of Contents
-
->Depending on how long the `README` is, add in a ToC or even abstract some sections away to different markdown files (i.e. `CONTRIBUTING.md`, `USAGE.md`, etc.).
 
 ## Built With
 
@@ -82,7 +76,7 @@ Since I use rbenv, I'm going to walk you through that installation. (_**NOTE:** 
 
 Code Talks uses [Rails] version 6.0.3.
 
-TODO: Rails install info goes here
+<!-- TODO: Rails install info goes here -->
 
 ### PostgreSQL
 
@@ -98,12 +92,12 @@ Fork [this repository](https://github.com/meg-gutshall/code-talk-requests-backen
 
 >List any other actions needed to be taken before starting up the server.
 
-TODO: Change header below and check over directions.
+<!-- TODO: Change header below and check over directions. -->
 
 **Steps for a Ruby on Rails app with PostgreSQL**
 Create a new file by typing `touch .env` and input the following text into this file:
 
-```
+```bash
 POSTGRES_USER=YOUR_USERNAME
 POSTGRES_PASSWORD=YOUR_PASSWORD
 POSTGRES_HOST='localhost'
@@ -125,30 +119,6 @@ When you're done, just type `Ctrl + C` in the terminal to stop your Rails sessio
 
 >Depending on the size of the project, if it is small and simple enough the reference docs can be added to the `README`. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
-## Tests
-
-<!-- Explain how to run the automated tests for this system -->
-
-### End to End Tests
-
-<!-- Explain what these tests test and why
-
-```
-Give an example
-``` -->
-
-### Coding Style Tests
-
-<!-- Explain what these tests test and why
-
-```
-Give an example
-``` -->
-
-## Deployment
-
-<!-- Add additional notes about how to deploy this on a live system -->
-
 ## Usage
 
 >End with an example of getting some seed data out of the system or using it for a demo. Add screenshots, video links, and/or GIFs in this section to make your usage instructions as clear as possible to the user.
@@ -169,32 +139,13 @@ I also created a seed file which holds randomized data to use specifically for a
 
 ## Contributing
 
->Add more detailed instructions for open-source projects. It's a good idea to include a code of conduct as well as resource links as to where absolute beginners can go to learn how to contribute to open source. [Here's a great place to start.][Open Source Guides]
->I personally like the Contributor Covenant and use the below statement as my default. I intend to expand on it once I create an open-source project truly worthy of others' contributions.
-
-Issues and pull requests are welcome at [<!-- link to repo -->](<!-- link to repo -->). This project as well as all other content on my GitHub are intended to be safe, welcoming, and open for collaboration. Users are expected to adhere to the [Contributor Covenant code of conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct) and those that do not will be reported and blocked. I got no time for that nonsense.
+Issues and pull requests are welcome at [this repository](https://github.com/meg-gutshall/code-talk-requests-backend). This project as well as all other content on my GitHub are intended to be safe, welcoming, and open for collaboration. Users are expected to adhere to the [Contributor Covenant code of conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/) and those that do not will be reported and blocked. I got no time for that nonsense.
 
 ## Authors
 
->Include your name and any links to your social media, contact info, or websites that you'd like. Don't forget to s/o your contributors here too!
-
 **[Meg Gutshall](https://github.com/meg-gutshall/)**
 
-See also the list of [contributors](#contributors) who participated in this project.
-
-## Contributors
-
->Add a list of contributors here. You may want to feature some who have really stood out.
-
-## Acknowledgments
-
->- Hat tip to anyone whose code was used
->- Inspiration
->- Anything else that seems useful
-
 ## License
-
->Include your license here. This is an absolute **must** as some users require that all services they include in their project have a license that matches their own. The MIT License is GitHub's recommendation and probably the most common one you'll see in repos, but there are [other options available][Choose an Open Source License]—copy*left*, anybody?—and that's not even an exhaustive list, just the most popular licenses on GitHub.
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
