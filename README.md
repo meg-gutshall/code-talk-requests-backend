@@ -149,6 +149,11 @@ Issues and pull requests are welcome at [this repository](https://github.com/meg
 
 **[Meg Gutshall](https://github.com/meg-gutshall/)**
 
+## Acknowledgments
+
+- [Sushi Chanrai](https://github.com/schanrai) and [Alice Balbuena](https://github.com/alicekb) for helping me implement and debug my JWT authorization from back to front and back again
+- [Ayana Zaire Cotton](https://github.com/AyanaZaire) for conducting an **amazing** step-by-step project build tutorial, being a wonderful instructor, and being an overall incredible person
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
