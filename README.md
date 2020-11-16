@@ -24,7 +24,7 @@ See [the frontend repo][Code Talk Requests Frontend] for a more detailed `README
 - Database: [PostgreSQL](#postgresql) - An open source object-relational database system
 - Dependency manager: [Bundler](#bundler)
 
-## Prerequisites
+## Technology Installation
 
 ### Ruby
 
@@ -96,7 +96,7 @@ The database for Code Talks is [PostgreSQL] version 12.3. [Visit PostgreSQL's of
 
 Code Talks uses [Bundler] version 2.1.4 to manage the Ruby Gems packaged in the app. Installing Bundler is as simple as opening a new terminal window and typing `gem install bundler` and you're ready to go!
 
-## Installation
+## Usage
 
 Fork [this repository](https://github.com/meg-gutshall/code-talk-requests-backend) from GitHub and clone your forked copy down to your computer. Open a new terminal window and `cd` into the `code-talk-requests-backend` root directory.
 
@@ -124,12 +124,6 @@ Type `bundle install` into the terminal to load all of the Ruby Gems and depende
 To start up the Rails server, which is in charge of rendering your app on the web, therefore allowing users to interact with it, type `rails s` in the terminal. You should now be able to open up a new browser window and navigate to [http://localhost:3000/](http://localhost:3000/) and see the [App Name] homepage displayed. From there, either log in or sign up and have fun!
 
 When you're done, just type `Ctrl + C` in the terminal to stop your Rails session and remember to also shut down your PostgreSQL server. If you'd like to reset the database to delete any objects you've created and start over fresh, type `rails db:reset` into the terminal.
-
-## API Reference/Documentation
-
->Depending on the size of the project, if it is small and simple enough the reference docs can be added to the `README`. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
-
-## Usage
 
 >End with an example of getting some seed data out of the system or using it for a demo. Add screenshots, video links, and/or GIFs in this section to make your usage instructions as clear as possible to the user.
 
