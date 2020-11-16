@@ -2,7 +2,17 @@
 
 This repo is the backend portion to my Code Talks Topic Request Platform. Below you'll find:
 
-<!-- TODO: Add ToC here -->
+1. [Technologies used to build this app](#built-with)
+2. [Installation instructions](#technology-installation) for each technology
+  a. [Ruby](#ruby)
+  b. [Rails](#rails)
+  c. [PostgreSQL](#postgresql)
+  d. [Bundler](#bundler)
+3. [App usage instructions](#usage)
+4. [Contributing information](#contributing)
+5. [Author information](#authors)
+6. [Acknowledgements](#acknowledgements)
+7. [License information](#license)
 
 See [the frontend repo][Code Talk Requests Frontend] for a more detailed `README.md`.
 
