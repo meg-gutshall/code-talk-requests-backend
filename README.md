@@ -98,7 +98,7 @@ Code Talks uses [Bundler] version 2.1.4 to manage the Ruby Gems packaged in the 
 
 ## Usage
 
-Fork [this repository](https://github.com/meg-gutshall/code-talk-requests-backend) from GitHub and clone your forked copy down to your computer. Open a new terminal window and `cd` into the `code-talk-requests-backend` root directory.
+Fork [this repository][Code Talk Requests Backend] from GitHub and clone your forked copy down to your computer. Open a new terminal window and `cd` into the `code-talk-requests-backend` root directory.
 
 >List any other actions needed to be taken before starting up the server.
 
@@ -143,22 +143,23 @@ I also created a seed file which holds randomized data to use specifically for a
 
 ## Contributing
 
-Issues and pull requests are welcome at [this repository](https://github.com/meg-gutshall/code-talk-requests-backend). This project as well as all other content on my GitHub are intended to be safe, welcoming, and open for collaboration. Users are expected to adhere to the [Contributor Covenant code of conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/) and those that do not will be reported and blocked. I got no time for that nonsense.
+Issues and pull requests are welcome at [this repository][Code Talk Requests Backend]. This project as well as all other content on my GitHub are intended to be safe, welcoming, and open for collaboration. Users are expected to adhere to the [Contributor Covenant code of conduct] and those that do not will be reported and blocked. I got no time for that nonsense.
 
 ## Authors
 
-**[Meg Gutshall](https://github.com/meg-gutshall/)**
+**[Meg Gutshall]**
 
 ## Acknowledgments
 
-- [Sushi Chanrai](https://github.com/schanrai) and [Alice Balbuena](https://github.com/alicekb) for helping me implement and debug my JWT authorization from back to front and back again
-- [Ayana Zaire Cotton](https://github.com/AyanaZaire) for conducting an **amazing** step-by-step project build tutorial, being a wonderful instructor, and being an overall incredible person
+- [Sushi Chanrai] and [Alice Balbuena] for helping me implement and debug my JWT authorization from back to front and back again
+- [Ayana Zaire Cotton] for conducting an **amazing** step-by-step project build tutorial, being a wonderful instructor, and being an overall incredible person
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 [Code Talk Requests Frontend]: https://github.com/meg-gutshall/code-talk-requests-frontend
+[Code Talk Requests Backend]: https://github.com/meg-gutshall/code-talk-requests-backend
 
 [RVM]: https://rvm.io/
 [rbenv]: https://github.com/rbenv/rbenv
@@ -171,3 +172,10 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 [Rails]: https://rubyonrails.org/
 [Active Record]: https://apidock.com/rails/v6.0.0/ActiveRecord/Base
 [PostgreSQL]: https://www.postgresql.org/
+
+[Contributor Covenant code of conduct]: https://www.contributor-covenant.org/version/2/0/code_of_conduct/ "Contributor Covenant code of conduct version 2.0"
+
+[Meg Gutshall]: https://meghangutshall.com/ "Meg Gutshall's website"
+[Sushi Chanrai]: https://github.com/schanrai "Sushi Chanrai's GitHub profile"
+[Alice Balbuena]: https://github.com/alicekb "Alice Balbuena's GitHub profile"
+[Ayana Zaire Cotton]: https://github.com/AyanaZaire "Ayana Zaire Cotton's GitHub profile"
