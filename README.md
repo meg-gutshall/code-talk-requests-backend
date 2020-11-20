@@ -4,10 +4,10 @@ This repo is the backend portion to my Code Talks Topic Request Platform. Below 
 
 1. [Technologies used to build this app](#built-with)
 2. [Installation instructions](#technology-prerequisites) for each technology
-  a. [Ruby](#ruby)
-  b. [Rails](#rails)
-  c. [Bundler](#bundler)
-  d. [PostgreSQL](#postgresql)
+    a. [Ruby](#ruby)
+    b. [Rails](#rails)
+    c. [Bundler](#bundler)
+    d. [PostgreSQL](#postgresql)
 3. [App usage instructions](#usage)
 4. [Contributing information](#contributing)
 5. [Author information](#authors)
