@@ -3,7 +3,7 @@
 This repo is the backend portion to my Code Talks Topic Request Platform. Below you'll find:
 
 1. [Technologies used to build this app](#built-with)
-2. [Installation instructions](#technology-installation) for each technology
+2. [Installation instructions](#technology-prerequisites) for each technology
   a. [Ruby](#ruby)
   b. [Rails](#rails)
   c. [Bundler](#bundler)
@@ -28,7 +28,7 @@ If you have all the requisite technologies for the [frontend][Code Talk Requests
 - Database: [PostgreSQL](#postgresql) - An open source object-relational database system
 - Dependency manager: [Bundler](#bundler)
 
-## Technology Installation
+## Technology Prerequisites
 
 ### Ruby
 
@@ -164,6 +164,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 [Code Talk Requests Backend]: https://github.com/meg-gutshall/code-talk-requests-backend
 [Code Talk Requests Frontend]: https://github.com/meg-gutshall/code-talk-requests-frontend
+[Code Talk Requests Frontend -- Built With]: https://github.com/meg-gutshall/code-talk-requests-frontend#built-with
 [Code Talk Requests Frontend -- Web App Installation]: https://github.com/meg-gutshall/code-talk-requests-frontend#web-app-installation
 [Code Talk Requests Frontend -- Usage]: https://github.com/meg-gutshall/code-talk-requests-frontend#usage
 
