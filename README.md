@@ -16,6 +16,10 @@ This repo is the backend portion to my Code Talks Topic Request Platform. Below 
 
 See [the frontend repo][Code Talk Requests Frontend] for a more detailed `README.md` including [Web App Installation][Code Talk Requests Frontend -- Web App Installation] and [Usage][Code Talk Requests Frontend -- Usage].
 
+## Web App Installation
+
+If you have all the requisite technologies for the [frontend][Code Talk Requests Frontend -- Built With] and [backend](#built-with) already installed, you can follow the directions in the [Web App Installation][Web App Installation][Code Talk Requests Frontend -- Web App Installation] section of the frontend repo. If not, you may want to skip down to the [Technology Prerequisites](#technology-prerequisites) section of each repo first.
+
 ## Built With
 
 - Language: [Ruby](#ruby)
