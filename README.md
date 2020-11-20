@@ -10,7 +10,7 @@ This repo is the backend portion to my Code Talks Topic Request Platform. Below 
     4. [PostgreSQL](#postgresql)
 3. [App usage instructions](#usage)
 4. [Contributing information](#contributing)
-5. [Author information](#authors)
+5. [Author information](#author)
 6. [Acknowledgements](#acknowledgements)
 7. [License information](#license)
 
@@ -108,9 +108,11 @@ The database for Code Talks is [PostgreSQL] version 12.3. [Visit PostgreSQL's of
 
 Issues and pull requests are welcome at [this repository][Code Talk Requests Backend]. This project as well as all other content on my GitHub are intended to be safe, welcoming, and open for collaboration. Users are expected to adhere to the [Contributor Covenant code of conduct] and those that do not will be reported and blocked. I got no time for that nonsense.
 
-## Authors
+## Author
 
 **[Meg Gutshall]**
+
+Connect with me on... [GitHub], [LinkedIn], [Twitter], and [DEV]!
 
 ## Acknowledgments
 
@@ -143,6 +145,10 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 [Contributor Covenant code of conduct]: https://www.contributor-covenant.org/version/2/0/code_of_conduct/ "Contributor Covenant code of conduct version 2.0"
 
 [Meg Gutshall]: https://meghangutshall.com/ "Meg Gutshall's website"
+[GitHub]: https://github.com/meg-gutshall "Meg Gutshall's GitHub profile"
+[LinkedIn]: https://www.linkedin.com/in/meghan-gutshall/ "Meg Gutshall's LinkedIn profile"
+[Twitter]: https://twitter.com/meg_gutshall "Meg Gutshall's Twitter profile"
+[DEV]: https://dev.to/meg_gutshall "Meg Gutshall's DEV profile"
 [Sushi Chanrai]: https://github.com/schanrai "Sushi Chanrai's GitHub profile"
 [Alice Balbuena]: https://github.com/alicekb "Alice Balbuena's GitHub profile"
 [Ayana Zaire Cotton]: https://github.com/AyanaZaire "Ayana Zaire Cotton's GitHub profile"
