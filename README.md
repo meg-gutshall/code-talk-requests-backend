@@ -20,6 +20,10 @@ See [the frontend repo][Code Talk Requests Frontend] for a more detailed `README
 
 If you have all the requisite technologies for the [frontend][Code Talk Requests Frontend -- Built With] and [backend](#built-with) already installed, you can follow the directions in the [Web App Installation][Web App Installation][Code Talk Requests Frontend -- Web App Installation] section of the frontend repo. If not, you may want to skip down to the [Technology Prerequisites](#technology-prerequisites) section of each repo first.
 
+## Usage
+
+See the Code Talk Requests Frontend repo for [usage instructions][Code Talk Requests Frontend -- Usage].
+
 ## Built With
 
 - Language: [Ruby](#ruby)
@@ -99,51 +103,6 @@ Code Talks uses [Bundler] version 2.1.4 to manage the Ruby Gems packaged in the 
 ### PostgreSQL
 
 The database for Code Talks is [PostgreSQL] version 12.3. [Visit PostgreSQL's official site][Postgres download] and select your operating system in order to download the right package. There's one option available for Windows users. As a Mac user, I originally used Homebrew as my download option, but after trying Postgres.app, I found it to be much more simple and user-friendly. There are plenty of options for whichever server type you prefer!
-
-## Usage
-
-Fork [this repository][Code Talk Requests Backend] from GitHub and clone your forked copy down to your computer. Open a new terminal window and `cd` into the `code-talk-requests-backend` root directory.
-
->List any other actions needed to be taken before starting up the server.
-
-<!-- TODO: Change header below and check over directions. -->
-
-**Steps for a Ruby on Rails app with PostgreSQL**
-Create a new file by typing `touch .env` and input the following text into this file:
-
-```bash
-POSTGRES_USER=YOUR_USERNAME
-POSTGRES_PASSWORD=YOUR_PASSWORD
-POSTGRES_HOST='localhost'
-POSTGRES_DB='[repo-name]'
-POSTGRES_TEST_DB='[repo-name]_test'
-```
-
->Redo commented out paragraph below. This should use the pg username and password credentials, not making up your own for each app.
-
-<!-- Replace `YOUR_USERNAME` with your computer's username—the name used in your terminal's root path (`$PATH`), or what you see when you type `PWD` in your terminal (i.e. `Users/yourname/`)—in single quotes and `YOUR_PASSWORD` with whatever you want it to be, again in single quotes. -->
-
-Type `bundle install` into the terminal to load all of the Ruby Gems and dependencies into your app. Start up the PostgreSQL server and type `rails db:setup` into the terminal. This allows PostgreSQL to create two new databases (development and test) using the `.env` file you just created in the [App Name] app (in addition to pre-existing configurations). Next, type `rails db:migrate`. This step runs the table migrations in the app, which gives the database instructions on what kind of data it should look to receive and to which models and attributes the data corresponds.
-
-To start up the Rails server, which is in charge of rendering your app on the web, therefore allowing users to interact with it, type `rails s` in the terminal. You should now be able to open up a new browser window and navigate to [http://localhost:3000/](http://localhost:3000/) and see the [App Name] homepage displayed. From there, either log in or sign up and have fun!
-
-When you're done, just type `Ctrl + C` in the terminal to stop your Rails session and remember to also shut down your PostgreSQL server. If you'd like to reset the database to delete any objects you've created and start over fresh, type `rails db:reset` into the terminal.
-
->End with an example of getting some seed data out of the system or using it for a demo. Add screenshots, video links, and/or GIFs in this section to make your usage instructions as clear as possible to the user.
-
-<!-- End with an example of getting some data out of the system or using it for a little demo -->
-
-<!-- **If I have a demo video**
-I recorded a quick demo video (below) on how to use [App Name].
-
-[![[App Name] demo video](https://img.youtube.com/vi/[link to YouTube video]/0.jpg)](https://youtu.be/[link to YouTube video]) -->
-
-<!-- **Steps for a Ruby on Rails app with PostgreSQL**
-I also created a seed file which holds randomized data to use specifically for app development and testing purposes. If you'd like to explore [App Name] with data preloaded into the database, type `rails db:seed` in the terminal and log in using the following credentials:
-
-```
-[credentials here]
-``` -->
 
 ## Contributing
 
