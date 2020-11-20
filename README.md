@@ -18,7 +18,7 @@ See [the frontend repo][Code Talk Requests Frontend] for a more detailed `README
 
 ## Web App Installation
 
-If you have all the requisite technologies for the [frontend][Code Talk Requests Frontend -- Built With] and [backend](#built-with) already installed, you can follow the directions in the [Web App Installation][Web App Installation][Code Talk Requests Frontend -- Web App Installation] section of the frontend repo. If not, you may want to skip down to the [Technology Prerequisites](#technology-prerequisites) section of each repo first.
+If you have all the requisite technologies for the [frontend][Code Talk Requests Frontend -- Built With] and [backend](#built-with) already installed, you can follow the directions in the [Web App Installation][Code Talk Requests Frontend -- Web App Installation] section of the frontend repo. If not, you may want to skip down to the [Technology Prerequisites](#technology-prerequisites) section of each repo first.
 
 ## Usage
 
