@@ -18,7 +18,7 @@ See [the frontend repo][Code Talk Requests Frontend] for a more detailed `README
 
 ## Web App Installation
 
-If you have all the requisite technologies for the [backend](#built-with) already installed, you can follow the directions in the [Web App Installation][Code Talk Requests Frontend -- Web App Installation] section of the frontend repo. If not, you may want to skip down to the [Technology Prerequisites](#technology-prerequisites) section first.
+If you have all the requisite technologies for the [frontend][Code Talk Requests Frontend -- Built With] and [backend](#built-with) already installed, you can follow the directions in the [Web App Installation][Code Talk Requests Frontend -- Web App Installation] section of the frontend repo. If not, you may want to skip down to the [Technology Prerequisites](#technology-prerequisites) section of each repo first.
 
 ## Usage
 
@@ -34,85 +34,75 @@ See the Code Talk Requests Frontend repo for [usage instructions][Code Talk Requ
 
 ## Technology Prerequisites
 
-Toggle the dropdowns for installation instructions for each of the technologies below.
+### Ruby
+
+Code Talks uses [Ruby] version 2.7.0. In my opinion, the best way to install Ruby is by using a Ruby version management system. The two most popular tools for this are [RVM] and [rbenv]. I've used both and have found rbenv to be more well-documented and easier to navigate than RVM but the ultimate choice is yours.
+
+Since I use rbenv, I'm going to walk you through that installation. (_**NOTE:** If you decide to install rbenv and you used to use RVM, you must remove all RVM files or rbenv will **not** work!_)
 
 <details>
-  <summary><h3 class="markdown-body" style="display: inline-block;">Ruby</h3></summary>
+  <summary>For Mac Users</summary>
 
-  Code Talks uses [Ruby] version 2.7.0. In my opinion, the best way to install Ruby is by using a Ruby version management system. The two most popular tools for this are [RVM] and [rbenv]. I've used both and have found rbenv to be more well-documented and easier to navigate than RVM but the ultimate choice is yours.
+  If you haven't done so already, download **[Homebrew]**. It's an amazing macOS package manager that's built with Ruby. Just paste the following script in a new terminal window:
 
-  Since I use rbenv, I'm going to walk you through that installation. (_**NOTE:** If you decide to install rbenv and you used to use RVM, you must remove all RVM files or rbenv will **not** work!_)
+  ```bash
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  ```
 
-  <details>
-    <summary>For Mac Users</summary>
+  It will run through the installation, and explain the steps the script is taking along the way.
 
-    If you haven't done so already, download **[Homebrew]**. It's an amazing macOS package manager that's built with Ruby. Just paste the following script in a new terminal window:
+  Once Homebrew is installed (or if you already had it installed, you smarty pants!), it's time to install rbenv. Open a new terminal window running `bash` or `zsh` and `cd` into your home path (i.e. `Users/yourname/`). Now type `brew install rbenv` _*Note: This command also installs `ruby-build`, so you'll be ready to install other Ruby versions out of the box._ Once rbenv is done installing, type `rbenv init` to begin the shell integration setup.
 
-    ```bash
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    ```
+  Restart your terminal for the installation changes to take effect. Make sure your setup is correct by running [the `rbenv-doctor` script][rbenv script] below:
 
-    It will run through the installation, and explain the steps the script is taking along the way.
+  ```bash
+  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+  ```
 
-    Once Homebrew is installed (or if you already had it installed, you smarty pants!), it's time to install rbenv. Open a new terminal window running `bash` or `zsh` and `cd` into your home path (i.e. `Users/yourname/`). Now type `brew install rbenv` _*Note: This command also installs `ruby-build`, so you'll be ready to install other Ruby versions out of the box._ Once rbenv is done installing, type `rbenv init` to begin the shell integration setup.
+  **NOW we install RUBY!**
 
-    Restart your terminal for the installation changes to take effect. Make sure your setup is correct by running [the `rbenv-doctor` script][rbenv script] below:
+  In your terminal, type `rbenv install 2.7.0` to download the version of Ruby you'll need to run Code Talks.
 
-    ```bash
-    curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
-    ```
-
-    **NOW we install RUBY!**
-
-    In your terminal, type `rbenv install 2.7.0` to download the version of Ruby you'll need to run Code Talks.
-
-    Once it's done installing, navigate to the Code Talks directory and type `rbenv local 2.7.0` to set your local environment's Ruby version. Then type `rbenv rehash`.
-  </details>
-
-  <details>
-    <summary>For Windows and Linux Users</summary>
-
-    To install rbenv on your system, open up a new window in your terminal and run [the `rbenv-installer` script][rbenv script] below:
-
-    ```bash
-    curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
-    ```
-
-    It will either install rbenv on your system or update your pre-existing version of rbenv, located under `~/.rbenv`. Additionally, [ruby-build] is also installed if rbenv install is not already available.
-
-    Restart your terminal for the installation changes to take effect. Make sure your setup is correct by running [the `rbenv-doctor` script][rbenv script] below:
-
-    ```bash
-    curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
-    ```
-
-    **NOW we install RUBY!**
-
-    In your terminal, type `rbenv install 2.7.0` to download the version of Ruby you'll need to run Code Talks.
-
-    Once it's done installing, navigate to the Code Talks directory and type `rbenv local 2.7.0` to set your local environment's Ruby version. Then type `rbenv rehash`.
-  </details>
+  Once it's done installing, navigate to the Code Talks directory and type `rbenv local 2.7.0` to set your local environment's Ruby version. Then type `rbenv rehash`.
 </details>
 
 <details>
-  <summary><h3 class="markdown-body" style="display: inline-block;">Rails</h3></summary>
+  <summary>For Windows and Linux Users</summary>
 
-  Code Talks uses [Rails] version 6.0.3. If you already have the dependencies (SQLite3, Node.js, and Yarn), Rails is super easy to install because it's packaged into a Ruby gem. Just write `gem install rails` in your terminal.
+  To install rbenv on your system, open up a new window in your terminal and run [the `rbenv-installer` script][rbenv script] below:
 
-  If you don't have Rails' dependencies, see the [Installing Rails] section of RailsGuides for a walkthrough of how to get setup.
+  ```bash
+  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+  ```
+
+  It will either install rbenv on your system or update your pre-existing version of rbenv, located under `~/.rbenv`. Additionally, [ruby-build] is also installed if rbenv install is not already available.
+
+  Restart your terminal for the installation changes to take effect. Make sure your setup is correct by running [the `rbenv-doctor` script][rbenv script] below:
+
+  ```bash
+  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+  ```
+
+  **NOW we install RUBY!**
+
+  In your terminal, type `rbenv install 2.7.0` to download the version of Ruby you'll need to run Code Talks.
+
+  Once it's done installing, navigate to the Code Talks directory and type `rbenv local 2.7.0` to set your local environment's Ruby version. Then type `rbenv rehash`.
 </details>
 
-<details>
-  <summary><h3 class="markdown-body" style="display: inline-block;">Bundler</h3></summary>
+### Rails
 
-  Code Talks uses [Bundler] version 2.1.4 to manage the Ruby Gems packaged in the app. Installing Bundler is as simple as opening a new terminal window and typing `gem install bundler` and you're ready to go!
-</details>
+Code Talks uses [Rails] version 6.0.3. If you already have the dependencies (SQLite3, Node.js, and Yarn), Rails is super easy to install because it's packaged into a Ruby gem. Just write `gem install rails` in your terminal.
 
-<details>
-  <summary><h3 class="markdown-body" style="display: inline-block;">PostgreSQL</h3></summary>
+If you don't have Rails' dependencies, see the [Installing Rails] section of RailsGuides for a walkthrough of how to get setup.
 
-  The database for Code Talks is [PostgreSQL] version 12.3. [Visit PostgreSQL's official site][Postgres download] and select your operating system in order to download the right package. There's one option available for Windows users. As a Mac user, I originally used Homebrew as my download option, but after trying Postgres.app, I found it to be much more simple and user-friendly. There are plenty of options for whichever server type you prefer!
-</details>
+### Bundler
+
+Code Talks uses [Bundler] version 2.1.4 to manage the Ruby Gems packaged in the app. Installing Bundler is as simple as opening a new terminal window and typing `gem install bundler` and you're ready to go!
+
+### PostgreSQL
+
+The database for Code Talks is [PostgreSQL] version 12.3. [Visit PostgreSQL's official site][Postgres download] and select your operating system in order to download the right package. There's one option available for Windows users. As a Mac user, I originally used Homebrew as my download option, but after trying Postgres.app, I found it to be much more simple and user-friendly. There are plenty of options for whichever server type you prefer!
 
 ## Contributing
 
@@ -133,6 +123,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 [Code Talk Requests Backend]: https://github.com/meg-gutshall/code-talk-requests-backend
 [Code Talk Requests Frontend]: https://github.com/meg-gutshall/code-talk-requests-frontend
+[Code Talk Requests Frontend -- Built With]: https://github.com/meg-gutshall/code-talk-requests-frontend#built-with
 [Code Talk Requests Frontend -- Web App Installation]: https://github.com/meg-gutshall/code-talk-requests-frontend#web-app-installation
 [Code Talk Requests Frontend -- Usage]: https://github.com/meg-gutshall/code-talk-requests-frontend#usage
 
