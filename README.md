@@ -6,15 +6,15 @@ This repo is the backend portion to my Code Talks Topic Request Platform. Below 
 2. [Installation instructions](#technology-installation) for each technology
   a. [Ruby](#ruby)
   b. [Rails](#rails)
-  c. [PostgreSQL](#postgresql)
-  d. [Bundler](#bundler)
+  c. [Bundler](#bundler)
+  d. [PostgreSQL](#postgresql)
 3. [App usage instructions](#usage)
 4. [Contributing information](#contributing)
 5. [Author information](#authors)
 6. [Acknowledgements](#acknowledgements)
 7. [License information](#license)
 
-See [the frontend repo][Code Talk Requests Frontend] for a more detailed `README.md`.
+See [the frontend repo][Code Talk Requests Frontend] for a more detailed `README.md` including [Web App Installation][Code Talk Requests Frontend -- Web App Installation] and [Usage][Code Talk Requests Frontend -- Usage].
 
 ## Built With
 
@@ -84,17 +84,17 @@ Since I use rbenv, I'm going to walk you through that installation. (_**NOTE:** 
 
 ### Rails
 
-Code Talks uses [Rails] version 6.0.3.
+Code Talks uses [Rails] version 6.0.3. If you already have the dependencies (SQLite3, Node.js, and Yarn), Rails is super easy to install because it's packaged into a Ruby gem. Just write `gem install rails` in your terminal.
 
-<!-- TODO: Rails install info goes here -->
-
-### PostgreSQL
-
-The database for Code Talks is [PostgreSQL] version 12.3. [Visit PostgreSQL's official site][Postgres download] and select your operating system in order to download the right package. There's one option available for Windows users. As a Mac user, I originally used Homebrew as my download option, but after trying Postgres.app, I found it to be much more simple and user-friendly. There are plenty of options for other server types, but I have no experience using any of them.
+If you don't have Rails' dependencies, see the [Installing Rails] section of RailsGuides for a walkthrough of how to get setup.
 
 ### Bundler
 
 Code Talks uses [Bundler] version 2.1.4 to manage the Ruby Gems packaged in the app. Installing Bundler is as simple as opening a new terminal window and typing `gem install bundler` and you're ready to go!
+
+### PostgreSQL
+
+The database for Code Talks is [PostgreSQL] version 12.3. [Visit PostgreSQL's official site][Postgres download] and select your operating system in order to download the right package. There's one option available for Windows users. As a Mac user, I originally used Homebrew as my download option, but after trying Postgres.app, I found it to be much more simple and user-friendly. There are plenty of options for whichever server type you prefer!
 
 ## Usage
 
@@ -158,8 +158,10 @@ Issues and pull requests are welcome at [this repository][Code Talk Requests Bac
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-[Code Talk Requests Frontend]: https://github.com/meg-gutshall/code-talk-requests-frontend
 [Code Talk Requests Backend]: https://github.com/meg-gutshall/code-talk-requests-backend
+[Code Talk Requests Frontend]: https://github.com/meg-gutshall/code-talk-requests-frontend
+[Code Talk Requests Frontend -- Web App Installation]: https://github.com/meg-gutshall/code-talk-requests-frontend#web-app-installation
+[Code Talk Requests Frontend -- Usage]: https://github.com/meg-gutshall/code-talk-requests-frontend#usage
 
 [RVM]: https://rvm.io/
 [rbenv]: https://github.com/rbenv/rbenv
@@ -170,6 +172,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 [Bundler]: https://bundler.io/
 [Ruby]: https://www.ruby-lang.org/en/
 [Rails]: https://rubyonrails.org/
+[Installing Rails]: https://guides.rubyonrails.org/getting_started.html#creating-a-new-rails-project-installing-rails
 [Active Record]: https://apidock.com/rails/v6.0.0/ActiveRecord/Base
 [PostgreSQL]: https://www.postgresql.org/
 
