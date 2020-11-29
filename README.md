@@ -11,7 +11,7 @@ This repo is the backend portion to my Code Talks Topic Request Platform. Below 
 3. [App usage instructions](#usage)
 4. [Contributing information](#contributing)
 5. [Author information](#author)
-6. [Acknowledgements](#acknowledgements)
+6. [Acknowledgments](#acknowledgments)
 7. [License information](#license)
 
 See [the frontend repo][Code Talk Requests Frontend] for a more detailed `README.md` including [Web App Installation][Code Talk Requests Frontend -- Web App Installation] and [Usage][Code Talk Requests Frontend -- Usage].
