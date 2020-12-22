@@ -18,10 +18,10 @@ connie = User.create!(
   password: "123",
   role: "codepanion"
 )
-adam = User.create!(
-  first_name: "Adam",
-  last_name: "Weissman",
-  email_address: "adam@e.com",
+stephen = User.create!(
+  first_name: "Stephen",
+  last_name: "Blais",
+  email_address: "stephen@e.com",
   password: "123",
   role: "codepanion"
 )
@@ -150,19 +150,19 @@ TopicRequest.create!(
   idea: "Project Collaboration",
   description: "Who wants to collaborate on a side project?",
   upvotes: Faker::Number.between(from: 0, to: 6),
-  codepanion: adam
+  codepanion: stephen
 )
 TopicRequest.create!(
   idea: "Python",
   description: "Learning the basics of Python",
   upvotes: Faker::Number.between(from: 0, to: 6),
-  codepanion: adam
+  codepanion: stephen
 )
 TopicRequest.create!(
   idea: "Web Hosting",
   description: "The best ways to host your portfolio site",
   upvotes: Faker::Number.between(from: 0, to: 6),
-  codepanion: adam
+  codepanion: stephen
 )
 TopicRequest.create!(
   idea: "Algorithms",
