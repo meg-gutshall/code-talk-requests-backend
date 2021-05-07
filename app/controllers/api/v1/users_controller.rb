@@ -12,15 +12,6 @@ class Api::V1::UsersController < ApplicationController
       render json: { errors: user.errors.full_messages }, status: :not_acceptable
     end
   end
-
-  def show
-    user = User.find_by(id: params[:id])
-    if user
-      render json: { user: UserSerializer.new(user) }, status: :accepted
-    else
-      render json: { errors: user.errors.full_messages }, status: :unprocessible_entity
-    end
-  end
   
   private
     def user_params
