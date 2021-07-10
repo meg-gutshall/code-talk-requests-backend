@@ -47,6 +47,6 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Dependabot updates
 gem "actionview", ">= 6.0.3.3"
-gem "nokogiri", ">= 1.11.0"
+gem "nokogiri", ">= 1.11.4"
 gem "activerecord", ">= 6.0.3.5"
 gem "actionpack", ">= 6.1.3.2"
