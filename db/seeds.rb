@@ -53,8 +53,7 @@ ashley = User.create!(
   password: "123",
   role: "codepanion"
 )
-num_codepanions = User.codepanion.count
-puts "Created #{num_codepanions} codepanions"
+puts "Created #{User.codepanion.count} codepanions"
 
 meg = User.create!(
   first_name: "Meg",
@@ -70,8 +69,7 @@ sherry = User.create!(
   password: "123",
   role: "super_admin"
 )
-num_super_admins = User.super_admin.count
-puts "Created #{num_super_admins} super_admin"
+puts "Created #{User.super_admin.count} super_admin"
 
 # Create topic requests
 TopicRequest.create!(
@@ -212,6 +210,4 @@ TopicRequest.create!(
   upvotes: Faker::Number.between(from: 0, to: 6),
   codepanion: steven
 )
-
-num_topic_requests = TopicRequest.all.count
-puts "Created #{num_topic_requests} topic requests"
+puts "Created #{TopicRequest.all.count} topic requests"
