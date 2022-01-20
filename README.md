@@ -2,35 +2,20 @@
 
 This repo is the backend portion to my Code Talks Topic Request Platform. Below you'll find:
 
-1. [Technologies used to build this app](#built-with)
-2. [Installation instructions](#technology-prerequisites) for each technology
+1. [Prerequisite technologies needed](#technology-prerequisites) with download instructions for each technology
     1. [Ruby](#ruby)
     2. [Rails](#rails)
     3. [Bundler](#bundler)
     4. [PostgreSQL](#postgresql)
+2. [Installation](#web-app-installation)
 3. [App usage instructions](#usage)
-4. [Contributing information](#contributing)
-5. [Author information](#author)
-6. [Acknowledgments](#acknowledgments)
-7. [License information](#license)
+4. [Technologies used to build this app](#built-with)
+5. [Contributing information](#contributing)
+6. [Author information](#author)
+7. [Acknowledgments](#acknowledgments)
+8. [License information](#license)
 
 See [the frontend repo][Code Talk Requests Frontend] for a more detailed `README.md` including [Web App Installation][Code Talk Requests Frontend -- Web App Installation] and [Usage][Code Talk Requests Frontend -- Usage].
-
-## Web App Installation
-
-If you have all the requisite technologies for the [frontend][Code Talk Requests Frontend -- Built With] and [backend](#built-with) already installed, you can follow the directions in the [Web App Installation][Code Talk Requests Frontend -- Web App Installation] section of the frontend repo. If not, you may want to skip down to the [Technology Prerequisites](#technology-prerequisites) section of each repo first.
-
-## Usage
-
-See the Code Talk Requests Frontend repo for [usage instructions][Code Talk Requests Frontend -- Usage].
-
-## Built With
-
-- Language: [Ruby](#ruby)
-- Framework: [Rails](#rails)
-- ORM: [Active Record] - This is Rails's built-in Object Relational Mapping system
-- Database: [PostgreSQL](#postgresql) - An open source object-relational database system
-- Dependency manager: [Bundler](#bundler)
 
 ## Technology Prerequisites
 
@@ -104,6 +89,22 @@ Code Talks uses [Bundler] version 2.1.4 to manage the Ruby Gems packaged in the 
 
 The database for Code Talks is [PostgreSQL] version 12.3. [Visit PostgreSQL's official site][Postgres download] and select your operating system in order to download the right package. There's one option available for Windows users. As a Mac user, I originally used Homebrew as my download option, but after trying Postgres.app, I found it to be much more simple and user-friendly. There are plenty of options for whichever server type you prefer!
 
+## Web App Installation
+
+If you have all the requisite technologies for the [frontend][Code Talk Requests Frontend -- Built With] and [backend](#built-with) already installed, you can follow the directions in the [Web App Installation][Code Talk Requests Frontend -- Web App Installation] section of the frontend repo. If not, you may want to skip down to the [Technology Prerequisites](#technology-prerequisites) section of each repo first.
+
+## Usage
+
+See the Code Talk Requests Frontend repo for [usage instructions][Code Talk Requests Frontend -- Usage].
+
+## Built With
+
+- Language: [Ruby](#ruby)
+- Framework: [Rails](#rails)
+- ORM: [Active Record] - This is Rails's built-in Object Relational Mapping system
+- Database: [PostgreSQL](#postgresql) - An open source object-relational database system
+- Dependency manager: [Bundler](#bundler)
+
 ## Contributing
 
 Issues and pull requests are welcome at [this repository][Code Talk Requests Backend]. This project as well as all other content on my GitHub are intended to be safe, welcoming, and open for collaboration. Users are expected to adhere to the [Contributor Covenant code of conduct] and those that do not will be reported and blocked. I got no time for that nonsense.
@@ -129,18 +130,18 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 [Code Talk Requests Frontend -- Web App Installation]: https://github.com/meg-gutshall/code-talk-requests-frontend#web-app-installation
 [Code Talk Requests Frontend -- Usage]: https://github.com/meg-gutshall/code-talk-requests-frontend#usage
 
-[RVM]: https://rvm.io/
-[rbenv]: https://github.com/rbenv/rbenv
-[rbenv script]: https://github.com/rbenv/rbenv-installer#rbenv-installer
-[ruby-build]: https://github.com/rbenv/ruby-build
-[Homebrew]: https://brew.sh/
-[Postgres download]: https://www.postgresql.org/download/
-[Bundler]: https://bundler.io/
-[Ruby]: https://www.ruby-lang.org/en/
-[Rails]: https://rubyonrails.org/
-[Installing Rails]: https://guides.rubyonrails.org/getting_started.html#creating-a-new-rails-project-installing-rails
-[Active Record]: https://apidock.com/rails/v6.0.0/ActiveRecord/Base
-[PostgreSQL]: https://www.postgresql.org/
+[RVM]: https://rvm.io/ "RVM"
+[rbenv]: https://github.com/rbenv/rbenv "rbenv"
+[rbenv script]: https://github.com/rbenv/rbenv-installer#rbenv-installer "rbenv script"
+[ruby-build]: https://github.com/rbenv/ruby-build "ruby-build"
+[Homebrew]: https://brew.sh/ "Homebrew"
+[Postgres download]: https://www.postgresql.org/download/ "Postgres download"
+[Bundler]: https://bundler.io/ "Bundler"
+[Ruby]: https://www.ruby-lang.org/en/ "Ruby"
+[Rails]: https://rubyonrails.org/ "Rails"
+[Installing Rails]: https://guides.rubyonrails.org/getting_started.html#creating-a-new-rails-project-installing-rails "Installing Rails"
+[Active Record]: https://apidock.com/rails/v6.0.0/ActiveRecord/Base "Active Record"
+[PostgreSQL]: https://www.postgresql.org/ "PostgreSQL"
 
 [Contributor Covenant code of conduct]: https://www.contributor-covenant.org/version/2/0/code_of_conduct/ "Contributor Covenant code of conduct version 2.0"
 
